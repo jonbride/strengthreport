@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.4.795 (http://www.liquid-technologies.com) -->
+<TemplateBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="Template.xsd">
+  <Template>
+    <Name>Default template (official)</Name>
+    <PageSize>
+      <Width>210</Width>
+      <Height>297</Height>
+    </PageSize>
+    <Margin>
+      <Top>15</Top>
+      <Bottom>15</Bottom>
+      <Left>15</Left>
+      <Right>15</Right>
+    </Margin>
+    <ReportHeader>
+      <Font>
+        <Source>SYSTEM</Source>
+        <FontName>Arial</FontName>
+        <Color C="0" M="0" Y="0" K="100" />
+        <Size>16</Size>
+        <Embed>true</Embed>
+        <Encoding>winansi</Encoding>
+        <FontStyle>Normal</FontStyle>
+      </Font>
+      <Backgrounds>
+        <Background C="5" M="5" Y="0" K="0" />
+      </Backgrounds>
+      <Alignment>Center</Alignment>
+      <Height>20</Height>
+    </ReportHeader>
+    <ReportFooter>
+      <Font>
+        <Source>SYSTEM</Source>
+        <FontName>Arial</FontName>
+        <Color C="0" M="0" Y="0" K="80" />
+        <Size>10</Size>
+        <Embed>true</Embed>
+        <Encoding>winansi</Encoding>
+        <FontStyle>Normal</FontStyle>
+      </Font>
+      <Backgrounds>
+        <Background C="0" M="0" Y="0" K="0" />
+      </Backgrounds>
+      <Alignment>Right</Alignment>
+      <Height>12</Height>
+    </ReportFooter>
+    <GroupHeading>
+      <Font>
+        <Source>SYSTEM</Source>
+        <FontName>Arial</FontName>
+        <Color C="0" M="0" Y="0" K="100" />
+        <Size>10</Size>
+        <Embed>true</Embed>
+        <Encoding>winansi</Encoding>
+        <FontStyle>BoldItalic</FontStyle>
+      </Font>
+      <Backgrounds>
+        <Background C="0" M="0" Y="0" K="10" />
+      </Backgrounds>
+      <Alignment>Left</Alignment>
+      <Height>8</Height>
+    </GroupHeading>
+    <Row>
+      <Font>
+        <Source>SYSTEM</Source>
+        <FontName>Arial</FontName>
+        <Color C="0" M="0" Y="0" K="100" />
+        <Size>10</Size>
+        <Embed>true</Embed>
+        <Encoding>winansi</Encoding>
+        <FontStyle>Normal</FontStyle>
+      </Font>
+      <Backgrounds>
+        <Background C="0" M="0" Y="0" K="0" />
+        <Background C="0" M="0" Y="0" K="6" />
+      </Backgrounds>
+      <Alignment>Left</Alignment>
+      <Height>6</Height>
+    </Row>
+    <Header>
+      <Font>
+        <Source>SYSTEM</Source>
+        <FontName>Arial</FontName>
+        <Color C="0" M="0" Y="0" K="100" />
+        <Size>12</Size>
+        <Embed>true</Embed>
+        <Encoding>winansi</Encoding>
+        <FontStyle>Bold</FontStyle>
+      </Font>
+      <Backgrounds>
+        <Background C="15" M="6" Y="7" K="0" />
+      </Backgrounds>
+      <Height>9</Height>
+      <Alignment>Left</Alignment>
+    </Header>
+  </Template>
+
+</TemplateBox>

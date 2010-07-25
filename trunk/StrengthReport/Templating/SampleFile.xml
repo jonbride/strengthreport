@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.4.795 (http://www.liquid-technologies.com) -->
+<Template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReport\Templating\Template.xsd">
+	<Name>string</Name>
+	<PageSize>
+		<Width>297</Width>
+		<Height>210</Height>
+	</PageSize>
+	<Margin>
+		<Top>30</Top>
+		<Bottom>18</Bottom>
+		<Left>18</Left>
+		<Right>18</Right>
+	</Margin>
+	<ReportHeading>
+		<Font>
+			<Source>SYSTEM</Source>
+			<FontName>Arial</FontName>
+			<Color C="0" M="0" Y="0" K="100" />
+			<Size>16</Size>
+			<Embed>false</Embed>
+			<Encoding>default</Encoding>
+		</Font>
+		<Alignment>Center</Alignment>
+		<Backgrounds>
+			<Background C="0" M="0" Y="0" K="0" />
+		</Backgrounds>
+		<Height>25</Height>
+	</ReportHeading>
+	<GroupHeading>
+		<Font>
+			<Source>SYSTEM</Source>
+			<FontName>Arial</FontName>
+			<Color C="0" M="0" Y="0" K="90" />
+			<Size>14</Size>
+			<Embed>false</Embed>
+			<Encoding>default</Encoding>
+		</Font>
+		<Alignment>Left</Alignment>
+		<Backgrounds>
+			<Background C="0" M="0" Y="0" K="0" />
+		</Backgrounds>
+		<Height>14</Height>
+	</GroupHeading>
+	<Row>
+		<Font>
+			<Source>SYSTEM</Source>
+			<FontName>Arial</FontName>
+			<Color C="0" M="0" Y="0" K="100" />
+			<Size>12</Size>
+			<Embed>false</Embed>
+			<Encoding>default</Encoding>
+		</Font>
+		<Alignment>Left</Alignment>
+		<Backgrounds>
+			<Background C="0" M="0" Y="0" K="0" />
+			<Background C="0" M="0" Y="0" K="15" />
+		</Backgrounds>
+		<Height>0</Height>
+	</Row>
+	<Header>
+		<Font>
+			<Source>SYSTEM</Source>
+			<FontName>Arial</FontName>
+			<FontWeight>Bold</FontWeight>
+			<Color C="0" M="0" Y="0" K="100" />
+			<Size>12</Size>
+			<Embed>false</Embed>
+			<Encoding>default</Encoding>
+		</Font>
+		<Alignment>Center</Alignment>
+		<Backgrounds>
+			<Background C="0" M="20" Y="20" K="70" />
+		</Backgrounds>
+		<Height>20</Height>
+	</Header>
+	<Footer>
+		<Font>
+			<Source>SYSTEM</Source>
+			<FontName>string</FontName>
+			<Color C="230" M="207" Y="139" K="216" />
+			<Size>-4975.34509</Size>
+			<Embed>false</Embed>
+			<Encoding>default</Encoding>
+		</Font>
+		<Alignment>Right</Alignment>
+		<Backgrounds>
+			<Background C="72" M="162" Y="117" K="51" />
+		</Backgrounds>
+		<Height>5827.6949058039</Height>
+	</Footer>
+</Template>

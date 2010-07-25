@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.4.795 (http://www.liquid-technologies.com) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="Template.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LayoutBox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Layout">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ArrayOfLayoutElement">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="LayoutElement">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Width" type="xs:string" />
+                          <xs:element minOccurs="0" name="Data">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="StaticData" type="xs:string" />
+                                <xs:element minOccurs="0" name="FunctionType" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Filter">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" name="Comparator" type="xs:string" />
+                                <xs:element minOccurs="0" name="CompareWith" type="xs:string" />
+                                <xs:element minOccurs="0" name="Enabled" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Title" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" use="optional" />
+            <xs:attribute name="Title" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TemplateBox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Template">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="PageSize">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Width" type="xs:string" />
+                    <xs:element minOccurs="0" name="Height" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Margin">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Top" type="xs:string" />
+                    <xs:element minOccurs="0" name="Bottom" type="xs:string" />
+                    <xs:element minOccurs="0" name="Left" type="xs:string" />
+                    <xs:element minOccurs="0" name="Right" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReportHeader">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Font">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Source" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontName" type="xs:string" />
+                          <xs:element minOccurs="0" name="Color">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Size" type="xs:string" />
+                          <xs:element minOccurs="0" name="Embed" type="xs:string" />
+                          <xs:element minOccurs="0" name="Encoding" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontStyle" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Backgrounds">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Background">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Alignment" type="xs:string" />
+                    <xs:element minOccurs="0" name="Height" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReportFooter">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Font">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Source" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontName" type="xs:string" />
+                          <xs:element minOccurs="0" name="Color">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Size" type="xs:string" />
+                          <xs:element minOccurs="0" name="Embed" type="xs:string" />
+                          <xs:element minOccurs="0" name="Encoding" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontStyle" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Backgrounds">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Background">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Alignment" type="xs:string" />
+                    <xs:element minOccurs="0" name="Height" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="GroupHeading">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Font">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Source" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontName" type="xs:string" />
+                          <xs:element minOccurs="0" name="Color">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Size" type="xs:string" />
+                          <xs:element minOccurs="0" name="Embed" type="xs:string" />
+                          <xs:element minOccurs="0" name="Encoding" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontStyle" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Backgrounds">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Background">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Alignment" type="xs:string" />
+                    <xs:element minOccurs="0" name="Height" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Row">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Font">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Source" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontName" type="xs:string" />
+                          <xs:element minOccurs="0" name="Color">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Size" type="xs:string" />
+                          <xs:element minOccurs="0" name="Embed" type="xs:string" />
+                          <xs:element minOccurs="0" name="Encoding" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontStyle" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Backgrounds">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="Background">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Alignment" type="xs:string" />
+                    <xs:element minOccurs="0" name="Height" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Header">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="Font">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Source" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontName" type="xs:string" />
+                          <xs:element minOccurs="0" name="Color">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="Size" type="xs:string" />
+                          <xs:element minOccurs="0" name="Embed" type="xs:string" />
+                          <xs:element minOccurs="0" name="Encoding" type="xs:string" />
+                          <xs:element minOccurs="0" name="FontStyle" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Backgrounds">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="Background">
+                            <xs:complexType>
+                              <xs:attribute name="C" type="xs:string" use="optional" />
+                              <xs:attribute name="M" type="xs:string" use="optional" />
+                              <xs:attribute name="Y" type="xs:string" use="optional" />
+                              <xs:attribute name="K" type="xs:string" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Height" type="xs:string" />
+                    <xs:element minOccurs="0" name="Alignment" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

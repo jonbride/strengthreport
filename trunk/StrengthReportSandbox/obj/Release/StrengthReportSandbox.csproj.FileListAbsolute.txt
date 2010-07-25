@@ -1,0 +1,14 @@
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\StrengthReportSandbox.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\StrengthReportSandbox.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\StrengthReportTest.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\XmlDiffPatch.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\KeePass.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\StrengthReport.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\itextsharp.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\KeePass.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\StrengthReport.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\StrengthReportTest.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\bin\Release\KeePass.XmlSerializers.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\obj\Release\ResolveAssemblyReference.cache
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\obj\Release\StrengthReportSandbox.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportSandbox\obj\Release\StrengthReportSandbox.pdb

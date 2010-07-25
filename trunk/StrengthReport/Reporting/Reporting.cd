@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StrengthReport.Reporting.ReportConfig">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAEAAAAAQAEEKAAAAAAgAAEAIEAAAAAAAAAA=</HashCode>
+      <FileName>Reporting\ReportConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.ReportEngine">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAIAAAAEAAAAAAAgAAAgAAAAAAAAAAAAAAAARAA=</HashCode>
+      <FileName>Reporting\ReportEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.ReportAbstract" Collapsed="true">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAEAAAEAAAAQKAAAAAAAgAEAIEAAAAACAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportAbstract.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.ReportScreen">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAiAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.ReportCsv">
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAgAAAAEAAAAAGAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportCsv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.ReportFactory">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.ReportHtml">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAIAAAABQAAAACAAAgAAAAEQABAACAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportHtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.CssWriter" Collapsed="true">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportHtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.CssFactory">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportHtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Reporting.ReportFormat.ReportPdf">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAABAABAAAEBQAQAAAAAAgAAACEAAAABCAAAA=</HashCode>
+      <FileName>Reporting\ReportFormat\ReportPdf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="StrengthReport.Reporting.IReport" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAAEAAAAACAAAA=</HashCode>
+      <FileName>Reporting\IReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="8.83" />
+</ClassDiagram>

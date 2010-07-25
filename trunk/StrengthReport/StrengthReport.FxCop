@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="hu-HU" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/../KeePass/Build/KeePass/Debug/StrengthReport.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Namespaces>
+   <Namespace Name="StrengthReport.Exceptions">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2009-02-26 03:05:15Z">
+      <Issue>
+       <Item>StrengthReport.Exceptions</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="StrengthReport.Reporting">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2009-02-25 21:57:49Z">
+      <Issue>
+       <Item>StrengthReport.Reporting</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="StrengthReport.Reporting.ReportFormat">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2009-02-25 21:57:49Z">
+      <Issue>
+       <Item>StrengthReport.Reporting.ReportFormat</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="StrengthReport.UI">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2009-02-25 21:57:49Z">
+      <Issue>
+       <Item>StrengthReport.UI</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/../KeePass/Build/KeePass/Debug/StrengthReport.dll">
+    <Modules>
+     <Module Name="strengthreport.dll">
+      <Messages>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2009-02-25 21:57:49Z">
+        <Issue>
+         <Item>'StrengthReport.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="StrengthReport">
+        <Types>
+         <Type Name="EncodedStringWriter">
+          <Members>
+           <Member Name="#.ctor(System.Text.Encoding)">
+            <Messages>
+             <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'StringWriter.StringWriter()'</Item>
+               <Item>'EncodedStringWriter.EncodedStringWriter(Encoding)'</Item>
+               <Item>'StringWriter.StringWriter(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionBox">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052" Created="2009-02-26 03:14:48Z">
+            <Issue>
+             <Item>'FunctionBox'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#GetFunctionClasses()">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Local">
+               <Item>'o'</Item>
+               <Item>'FunctionAbstract'</Item>
+               <Item>'FunctionBox.GetFunctionClasses()'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'List&lt;FunctionAbstract&gt;'</Item>
+               <Item>'FunctionBox.GetFunctionClasses()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2009-02-25 21:57:49Z">
+              <Issue Certainty="50">
+               <Item>'FunctionBox.GetFunctionClasses()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetFunctionNames()">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'List&lt;string&gt;'</Item>
+               <Item>'FunctionBox.GetFunctionNames()'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2009-02-25 21:57:49Z">
+              <Issue Certainty="50">
+               <Item>'FunctionBox.GetFunctionNames()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GeneratingForm+InvokeDelegate">
+          <Messages>
+           <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Created="2009-02-25 21:57:49Z">
+            <Issue>
+             <Item>'GeneratingForm.InvokeDelegate'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="StrengthReportExt">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2009-02-25 21:57:49Z" FixCategory="DependsOnFix">
+            <Issue Name="DependsOnFix">
+             <Item>'StrengthReportExt'</Item>
+             <Item>'ToolStripSeparator', 'ToolStripMenuItem'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor()">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'StrengthReportExt.StrengthReportExt()'</Item>
+               <Item>'StrengthReportExt.m_host'</Item>
+               <Item>'IPluginHost'</Item>
+               <Item>null</Item>
+              </Issue>
+              <Issue>
+               <Item>'StrengthReportExt.StrengthReportExt()'</Item>
+               <Item>'StrengthReportExt.m_tsSeparator'</Item>
+               <Item>'ToolStripSeparator'</Item>
+               <Item>null</Item>
+              </Issue>
+              <Issue>
+               <Item>'StrengthReportExt.StrengthReportExt()'</Item>
+               <Item>'StrengthReportExt.m_tsmiMenuItem'</Item>
+               <Item>'ToolStripMenuItem'</Item>
+               <Item>null</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Utils">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052" Created="2009-02-26 03:14:48Z">
+            <Issue>
+             <Item>'Utils'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.Exceptions">
+        <Types>
+         <Type Name="NoReportTypeException">
+          <Messages>
+           <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Created="2009-02-25 21:57:49Z">
+            <Issue Name="MissingConstructor">
+             <Item>'NoReportTypeException'</Item>
+             <Item>protected NoReportTypeException(SerializationInfo, StreamingContext)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'NoReportTypeException'</Item>
+             <Item>public NoReportTypeException(String)</Item>
+            </Issue>
+            <Issue Name="MissingConstructor">
+             <Item>'NoReportTypeException'</Item>
+             <Item>public NoReportTypeException(String, Exception)</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237" Created="2009-02-25 21:57:49Z">
+            <Issue Certainty="95" Level="Error">
+             <Item>'NoReportTypeException'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.Layouting">
+        <Types>
+         <Type Name="DataElement">
+          <Members>
+           <Member Name="#Equals(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Parameter">
+               <Item>'other'</Item>
+               <Item>'DataElement'</Item>
+               <Item>'DataElement.Equals(object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'DataElement.Equals(object)'</Item>
+               <Item>'other'</Item>
+               <Item>'obj'</Item>
+               <Item>'object.Equals(object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FunctionType">
+            <Accessors>
+             <Accessor Name="#set_FunctionType(System.String)">
+              <Messages>
+               <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+                <Issue Name="Local">
+                 <Item>'o'</Item>
+                 <Item>'FunctionAbstract'</Item>
+                 <Item>'DataElement.FunctionType.set(string)'</Item>
+                 <Item>castclass</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DataElementList">
+          <Members>
+           <Member Name="#Standard">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'DataElementList'</Item>
+               <Item>'DataElementList.Standard'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EntryDataType">
+          <Members>
+           <Member Name="#URL">
+            <Messages>
+             <Message Id="URL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-03-02 06:17:07Z">
+              <Issue Name="Member">
+               <Item>URL</Item>
+               <Item>'EntryDataType.URL'</Item>
+               <Item>Url</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Filter">
+          <Members>
+           <Member Name="#ComparatorPasswordQuality">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2009-02-25 22:19:35Z">
+              <Issue>
+               <Item>'Filter.ComparatorPasswordQuality'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ComparatorString">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2009-02-25 22:19:35Z">
+              <Issue>
+               <Item>'Filter.ComparatorString'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CompareString(System.String)">
+            <Messages>
+             <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'int.Parse(string)'</Item>
+               <Item>'Filter.CompareString(string)'</Item>
+               <Item>'int.Parse(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.CompareTo(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Filter.CompareString(string)'</Item>
+               <Item>'string.CompareTo(string)'</Item>
+               <Item>'string.Compare(string, string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Filter.CompareString(string)'</Item>
+               <Item>'string.CompareTo(string)'</Item>
+               <Item>'string.Compare(string, string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Filter.CompareString(string)'</Item>
+               <Item>'string.CompareTo(string)'</Item>
+               <Item>'string.Compare(string, string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Filter.CompareString(string)'</Item>
+               <Item>'string.CompareTo(string)'</Item>
+               <Item>'string.Compare(string, string, StringComparison)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Filter.CompareString(string)'</Item>
+               <Item>'string.CompareTo(string)'</Item>
+               <Item>'string.Compare(string, string, StringComparison)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Equals(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Parameter">
+               <Item>'obj'</Item>
+               <Item>'Filter'</Item>
+               <Item>'Filter.Equals(object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionAbstract">
+          <Members>
+           <Member Name="#m_Desc">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'FunctionAbstract.m_Desc'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Title">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'FunctionAbstract.m_Title'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Layout">
+          <Messages>
+           <Message TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724" Created="2009-02-25 21:57:49Z">
+            <Issue Name="System">
+             <Item>'Layout'</Item>
+             <Item>System.Windows.Forms.Layout</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Clone()">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'Layout.Clone()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Equals(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Parameter">
+               <Item>'obj'</Item>
+               <Item>'Layout'</Item>
+               <Item>'Layout.Equals(object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LayoutBox">
+          <Members>
+           <Member Name="#.ctor(System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutBox.LayoutBox(string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LoadFromFile(System.String)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutBox'</Item>
+               <Item>'LayoutBox.LoadFromFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LoadFromString(System.String)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutBox'</Item>
+               <Item>'LayoutBox.LoadFromString(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Serialize()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutBox.Serialize()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LayoutElement">
+          <Members>
+           <Member Name="#Equals(System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Parameter">
+               <Item>'obj'</Item>
+               <Item>'LayoutElement'</Item>
+               <Item>'LayoutElement.Equals(object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ListToString(System.Collections.Generic.List`1&lt;System.String&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutElement.ListToString(List&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-25 21:57:49Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'LayoutElement.ListToString(List&lt;string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.Measuring">
+        <Types>
+         <Type Name="AdvancedStrengthMeasure">
+          <Members>
+           <Member Name="#Evaluate(KeePassLib.PwEntry)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'AdvancedStrengthMeasure.Evaluate(PwEntry)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'AdvancedStrengthMeasure.Evaluate(PwEntry)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Reverse(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-25 21:57:49Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'AdvancedStrengthMeasure.Reverse(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.Reporting">
+        <Types>
+         <Type Name="ReportConfig">
+          <Members>
+           <Member Name="#.ctor(System.IO.Stream,System.String,StrengthReport.Layouting.Layout,StrengthReport.Templating.Template,System.Collections.Generic.List`1&lt;KeePassLib.PwGroup&gt;,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'ReportConfig.ReportConfig(Stream, string, Layout, Template, List&lt;PwGroup&gt;, Dictionary&lt;string, string&gt;)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'List&lt;PwGroup&gt;'</Item>
+               <Item>'ReportConfig.ReportConfig(Stream, string, Layout, Template, List&lt;PwGroup&gt;, Dictionary&lt;string, string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Layout">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'ReportConfig.Layout'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.Reporting.ReportFormat">
+        <Types>
+         <Type Name="CssWriter">
+          <Members>
+           <Member Name="#AddRaw(System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'CssWriter.AddRaw(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportAbstract">
+          <Messages>
+           <Message TypeName="AbstractTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1012" Created="2009-02-25 21:57:49Z">
+            <Issue>
+             <Item>'ReportAbstract'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.IO.Stream,StrengthReport.Layouting.Layout,StrengthReport.Templating.Template,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'ReportAbstract.ReportAbstract(Stream, Layout, Template, Dictionary&lt;string, string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Layout">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'ReportAbstract.Layout'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_ConfigParams">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ReportAbstract.m_ConfigParams'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Layout">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ReportAbstract.m_Layout'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'ReportAbstract.m_Layout'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Output">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ReportAbstract.m_Output'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Template">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ReportAbstract.m_Template'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Title">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ReportAbstract.m_Title'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportCsv">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2009-03-02 06:17:07Z">
+            <Issue>
+             <Item>'ReportCsv'</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2009-03-02 06:17:07Z" FixCategory="NonBreaking">
+            <Issue Name="NonBreaking">
+             <Item>'ReportCsv'</Item>
+             <Item>'StreamWriter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#AddRow(System.String[])">
+            <Messages>
+             <Message Id="item" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'ReportCsv.AddRow(string[])'</Item>
+               <Item>'item'</Item>
+               <Item>'string'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportFactory">
+          <Members>
+           <Member Name="#Create(System.String,System.IO.Stream,StrengthReport.Layouting.Layout,StrengthReport.Templating.Template,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)">
+            <Messages>
+             <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'string.ToUpper()'</Item>
+               <Item>'ReportFactory.Create(string, Stream, Layout, Template, Dictionary&lt;string, string&gt;)'</Item>
+               <Item>'string.ToUpper(CultureInfo)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportHtml">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2009-02-26 02:46:28Z" FixCategory="DependsOnFix">
+            <Issue Name="DependsOnFix">
+             <Item>'ReportHtml'</Item>
+             <Item>'StreamWriter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(System.IO.Stream,StrengthReport.Layouting.Layout,StrengthReport.Templating.Template,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-26 02:46:28Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'ReportHtml.ReportHtml(Stream, Layout, Template, Dictionary&lt;string, string&gt;)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'ReportHtml.ReportHtml(Stream, Layout, Template, Dictionary&lt;string, string&gt;)'</Item>
+               <Item>'ReportHtml.m_RowCount'</Item>
+               <Item>'int'</Item>
+               <Item>0</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AddRow(System.String[])">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'ReportHtml.AddRow(string[])'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Close()">
+            <Messages>
+             <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'int.ToString()'</Item>
+               <Item>'ReportHtml.Close()'</Item>
+               <Item>'int.ToString(IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportPdf">
+          <Members>
+           <Member Name="#.ctor(System.IO.Stream,StrengthReport.Layouting.Layout,StrengthReport.Templating.Template,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'ReportPdf.ReportPdf(Stream, Layout, Template, Dictionary&lt;string, string&gt;)'</Item>
+               <Item>'ReportPdf.m_rowCount'</Item>
+               <Item>'int'</Item>
+               <Item>0</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#cm2pt(System.Single)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-03-02 06:17:07Z">
+              <Issue>
+               <Item>'ReportPdf.cm2pt(float)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Document">
+            <Accessors>
+             <Accessor Name="#get_Document()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-26 02:46:28Z">
+                <Issue>
+                 <Item>'ReportPdf.Document.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#m_Writer">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2009-02-26 02:46:28Z">
+              <Issue>
+               <Item>'ReportPdf.m_Writer'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportScreen">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2009-02-25 21:57:49Z" FixCategory="NonBreaking">
+            <Issue Name="NonBreaking">
+             <Item>'ReportScreen'</Item>
+             <Item>'DataTable'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.ctor(StrengthReport.Layouting.Layout,System.Collections.Generic.Dictionary`2&lt;System.String,System.String&gt;)">
+            <Messages>
+             <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>DataTable</Item>
+               <Item>'ReportScreen.ReportScreen(Layout, Dictionary&lt;string, string&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportScreenForm">
+          <Members>
+           <Member Name="#Dispose(System.Boolean)">
+            <Messages>
+             <Message Id="w_Icon" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ReportScreenForm'</Item>
+               <Item>'ReportScreenForm.w_Icon'</Item>
+               <Item>'Icon'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.Templating">
+        <Types>
+         <Type Name="Color">
+          <Members>
+           <Member Name="#C">
+            <Messages>
+             <Message Id="C" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-25 21:57:49Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Color.C'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetHex()">
+            <Messages>
+             <Message Id="B" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2009-02-26 03:10:34Z">
+              <Issue>
+               <Item>'Color.GetHex()'</Item>
+               <Item>'B'</Item>
+               <Item>'int'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Int32.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-26 03:10:34Z">
+              <Issue>
+               <Item>'int.ToString(string)'</Item>
+               <Item>'Color.GetHex()'</Item>
+               <Item>'int.ToString(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString(string)'</Item>
+               <Item>'Color.GetHex()'</Item>
+               <Item>'int.ToString(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'int.ToString(string)'</Item>
+               <Item>'Color.GetHex()'</Item>
+               <Item>'int.ToString(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2009-02-26 03:10:34Z">
+              <Issue Certainty="50">
+               <Item>'Color.GetHex()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#K">
+            <Messages>
+             <Message Id="K" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-25 21:57:49Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Color.K'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#M">
+            <Messages>
+             <Message Id="M" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-25 21:57:49Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Color.M'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Y">
+            <Messages>
+             <Message Id="Y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-25 21:57:49Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'Color.Y'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FontSource">
+          <Members>
+           <Member Name="#FILE">
+            <Messages>
+             <Message Id="FILE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Member">
+               <Item>FILE</Item>
+               <Item>'FontSource.FILE'</Item>
+               <Item>File</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SYSTEM">
+            <Messages>
+             <Message Id="SYSTEM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-25 21:57:49Z">
+              <Issue Name="Member">
+               <Item>SYSTEM</Item>
+               <Item>'FontSource.SYSTEM'</Item>
+               <Item>System</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StyleBackgrounds">
+          <Members>
+           <Member Name="#Items">
+            <Messages>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'StyleBackgrounds.Items'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TemplateBox">
+          <Members>
+           <Member Name="#LoadFromFile(System.String)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'TemplateBox'</Item>
+               <Item>'TemplateBox.LoadFromFile(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="StrengthReport.UI">
+        <Types>
+         <Type Name="ConfigDialog">
+          <Members>
+           <Member Name="#.ctor(KeePass.Plugins.IPluginHost)">
+            <Messages>
+             <Message TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ConfigDialog.ConfigDialog(IPluginHost)'</Item>
+               <Item>'ConfigDialog.m_Filter'</Item>
+               <Item>'Filter'</Item>
+               <Item>null</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#button1_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ConfigDialog.button1_Click(object, EventArgs)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'ConfigDialog.button1_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#collapsibleGroupBox1_Load(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ConfigDialog.collapsibleGroupBox1_Load(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Filter">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ConfigDialog.m_Filter'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#m_Layout">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ConfigDialog.m_Layout'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#radioHTML_CheckedChanged(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'ConfigDialog.radioHTML_CheckedChanged(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LayoutBoxEditor">
+          <Members>
+           <Member Name="#btnDelete_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutBoxEditor.btnDelete_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LayoutEditor">
+          <Members>
+           <Member Name="#.ctor(StrengthReport.Layouting.Layout)">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'LayoutEditor.LayoutEditor(Layout)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#btnDelete_Click(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'LayoutEditor.btnDelete_Click(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ReportLayout">
+            <Messages>
+             <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'Layout'</Item>
+               <Item>'LayoutEditor.ReportLayout'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="#get_ReportLayout()">
+              <Messages>
+               <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-02-25 21:57:49Z">
+                <Issue Name="Local">
+                 <Item>'o'</Item>
+                 <Item>'LayoutElement'</Item>
+                 <Item>'LayoutEditor.ReportLayout.get()'</Item>
+                 <Item>castclass</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MyNode">
+          <Members>
+           <Member Name="#Group">
+            <Accessors>
+             <Accessor Name="#get_Group()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-25 21:57:49Z">
+                <Issue>
+                 <Item>'MyNode.Group.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#m_group">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2009-02-25 21:57:49Z">
+              <Issue>
+               <Item>'MyNode.m_group'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AbstractTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1012">
+    <Resolution Name="Default">Change the accessibility of all public constructors in {0} to protected.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+    <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+    <Resolution Name="Default">{0} contains field {1} that is of IDisposable type: {2}. Change the Dispose method on {0} to call Dispose or Close on this field.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Local">{0}, a variable, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+    <Resolution Name="Parameter">{0}, a parameter, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+    <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+    <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotInitializeUnnecessarily" Category="Microsoft.Performance" CheckId="CA1805">
+    <Resolution Name="Default">{0} initializes field {1} of type {2} to {3}. Remove this initialization because it will be done automatically by the runtime.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="MemberMoreMeaningfulName">Consider providing a more meaningful name than member name {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+    <Resolution Name="MissingConstructor">Add the following constructor to {0}: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkISerializableTypesWithSerializable" Category="Microsoft.Usage" CheckId="CA2237">
+    <Resolution Name="Default">Add [Serializable] to {0} as this type implements ISerializable.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+    <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   </Rule>
+   <Rule TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725">
+    <Resolution Name="Default">In member {0}, change parameter name {1} to {2} in order to match the identifier as it has been declared in {3}.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+    <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306">
+    <Resolution Name="Default">Be sure to set the {0} Locale property wherever {1} creates an instance of that type.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+    <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+    <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide a StringComparison. This should be replaced with a call to {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="StaticHolderTypesShouldBeSealed" Category="Microsoft.Design" CheckId="CA1052">
+    <Resolution Name="Default">Mark {0} as sealed.</Resolution>
+   </Rule>
+   <Rule TypeName="TypeNamesShouldNotMatchNamespaces" Category="Microsoft.Naming" CheckId="CA1724">
+    <Resolution Name="System">The type name {0} conflicts in whole or in part with the namespace name '{1}' defined in the .NET Framework. Rename the type to eliminate the conflict.</Resolution>
+   </Rule>
+   <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+    <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+    <Resolution Name="NonBreaking">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>
