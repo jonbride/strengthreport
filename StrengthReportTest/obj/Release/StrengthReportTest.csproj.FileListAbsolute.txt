@@ -1,0 +1,16 @@
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\Templating\ExampleTemplate.xml
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\StrengthReportTest.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\StrengthReportTest.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\KeePass.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\StrengthReport.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\XmlDiffPatch.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\itextsharp.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\KeePass.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\StrengthReport.pdb
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\bin\Release\KeePass.XmlSerializers.dll
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\obj\Release\ResolveAssemblyReference.cache
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\obj\Release\StrengthReportTest.Layouting.LayoutingResource.resources
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\obj\Release\StrengthReportTest.Templating.TemplatingResources.resources
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\obj\Release\StrengthReportTest.csproj.GenerateResource.Cache
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\obj\Release\StrengthReportTest.exe
+D:\Project\Rendszerfejlesztes\StrengthReport\StrengthReportTest\obj\Release\StrengthReportTest.pdb

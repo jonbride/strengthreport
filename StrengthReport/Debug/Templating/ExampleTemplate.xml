@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template>
+	<Header>
+		<Font>
+			<FontName>Arial</FontName>
+			<Embed>true</Embed>
+			<Color C="255" M="0" Y="0" K="0"/>
+			<Size>4</Size>
+			<Encoding>winansi</Encoding>
+			<Source>SYSTEM</Source>
+        </Font>
+		<Alignment>Center</Alignment>
+		<Background R="0" G="0" B="0"/>
+    </Header>
+
+	<Footer>
+		<Font>
+			<FontName>Arial</FontName>
+			<Embed>true</Embed>
+			<Color C="255" M="0" Y="0" K="0"/>
+			<Size>4</Size>
+			<Encoding>winansi</Encoding>
+			<Source>SYSTEM</Source>
+        </Font>
+		<Alignment>Center</Alignment>
+		<Background R="0" G="0" B="0"/>
+    </Footer>
+	
+	<Row>
+		<Font>
+			<FontName>Arial</FontName>
+			<Embed>true</Embed>
+			<Color C="255" M="0" Y="0" K="0"/>
+			<Size>4</Size>
+			<Encoding>winansi</Encoding>
+			<Source>SYSTEM</Source>
+        </Font>
+		<Alignment>Center</Alignment>
+		<Background R="0" G="0" B="0"/>
+    </Row>
+	
+	<Margin>
+		<Top>50</Top>
+		<Bottom>20</Bottom>
+		<Left>20</Left>
+		<Right>20</Right>
+    </Margin>
+
+	<Name>Example Template</Name>
+
+	<PageSize>
+		<Width>210</Width>
+		<Height>297</Height>
+    </PageSize>
+	
+	<GroupHeading>
+		<Font>
+			<FontName>Arial</FontName>
+			<Embed>true</Embed>
+			<Color C="255" M="0" Y="0" K="0"/>
+			<Size>4</Size>
+			<Encoding>winansi</Encoding>
+			<Source>SYSTEM</Source>
+        </Font>
+		<Alignment>Center</Alignment>
+		<Background R="0" G="0" B="0"/>
+    </GroupHeading>
+
+	<ReportHeading>
+		<Font>
+			<FontName>Arial</FontName>
+			<Embed>true</Embed>
+			<Color C="255" M="0" Y="0" K="0"/>
+			<Size>4</Size>
+			<Encoding>winansi</Encoding>
+			<Source>SYSTEM</Source>
+        </Font>
+		<Alignment>Center</Alignment>
+		<Background R="0" G="0" B="0"/>
+	</ReportHeading>
+
+</Template>

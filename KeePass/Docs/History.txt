@@ -1,0 +1,675 @@
+2008-11-01: 2.06 Beta
+- Translation system is now complete (translations to various
+  languages will be published on the KeePass translations page
+  when translators finish them)
+- When saving the database, KeePass now first checks whether
+  the file on disk/server has been modified since it was loaded
+  and if so, asks the user whether to synchronize with the
+  changed file instead of overwriting it (i.e. multiple users
+  can now use a shared database on a network drive)
+- Database files are now verified (read and hashed) after
+  writing them to disk (in order to prevent data loss caused by
+  damaged/broken devices and/or file systems)
+- Completely new auto-type/URL placeholder replacement and
+  field reference engine
+- On Windows Vista, some of the message boxes are now displayed
+  as modern task dialogs
+- KeePass is now also available as MSI package
+- Accessibility: added advanced option to optimize the user
+  interface for screen readers (only enable this option if
+  you're really using a screen reader)
+- Added standard client icons: Tux, feather, apple, generic
+  Wiki icon, '$', certificate and BlackBerry
+- Secure edit controls in the master key and entry dialogs now
+  accept text drops
+- Added ability to store notes for each group (see 'Notes' tab
+  in the group editing window), these notes are shown in the
+  tooltip of the group in the group tree of the main window
+- Group names in the entry details view are now clickable;
+  click it to jump to the group of the entry (especially useful
+  for jumping from search results to the real group of an
+  entry)
+- Added 'GROUPPATH', 'DELAY' and 'PICKPASSWORDCHARS' special
+  placeholders to auto-type sequence editing dialog
+- Wildcards (*) may now also appear in the middle of auto-type
+  target window filters
+- For auto-type target window filters, regular expressions are
+  now supported (enclose in //)
+- KeePass now shows an explicit file corruption warning message
+  when saving to a file fails
+- Added option to prepend a special auto-type initialization
+  sequence for Internet Explorer and Maxthon windows to fix a
+  focus issue (option enabled by default)
+- Added ability to specify a minimum length and minimum
+  estimated quality that master passwords must have (see help
+  file -> Features -> Composite Master Key; for admins)
+- Added field reference creation dialog (accessible through
+  the 'Tools' menu in the entry editing dialog)
+- Field references are dereferenced when copying data to the
+  clipboard
+- Entry field references are now dereferenced in drag&drop
+  operations
+- KeePass now follows field references in indirect auto-type
+  sequence paths
+- Added internal field reference cache (highly improves
+  performance of multiple-cyclic/recursive field references)
+- Added managed system power mode change handler
+- Added "Lock Workspace" tray context menu command
+- Moved all export commands into a new export dialog
+- Added context menu command to export the selected group only
+- Added context menu command to export selected entries only
+- Added support for importing Password Memory 2008 XML files
+- Added support for importing Password Keeper 7.0 CSV files
+- Added support for importing Passphrase Keeper 2.70 HTML files
+- Added support for importing data from PassKeeper 1.2
+- Added support for importing Mozilla bookmarks JSON files
+  (Firefox 3 bookmark files)
+- Added support for exporting to KeePass 1.x CSV files
+- Added XSL transformation file to export passwords only
+  (useful for generating and exporting password lists)
+- Added support for writing databases to hidden files
+- When passing '/?', '--help' or similar on the command line,
+  KeePass will now open the command line help
+- When single instance mode is enabled and a second instance is
+  started with command line parameters, these parameters are
+  now sent to the already open KeePass instance
+- KeePass now ships with a compiled XML serializer library,
+  which highly improves startup performance
+- Added support for Uniform Naming Convention (UNC) paths
+  (Windows) in the URL field (without cmd:// prefix)
+- Added option to exclude expired entries in the 'Find' dialog
+- Added option to exclude expired entries in quick searches
+  (toolbar; disabled by default)
+- The box to enter the name of a custom string field is now a
+  combobox that suggests previously-used names in its drop-down
+  list
+- Added Shift, Control and Alt key modifiers to placeholder
+  overview in the auto-type sequence editing dialog
+- Added support for 64 byte key files which don't contain hex
+  keys
+- Added Ctrl-Shift-F accelerator for the 'Find in this Group'
+  context menu command (group tree must have the focus)
+- Added export ability to KPScript plugin
+- Ctrl-Tab now also works in the password list, groups tree and
+  entry details view
+- Added multi-user documentation
+- Plugin developers: DocumentManagerEx now has an
+  ActiveDocumentSelected event
+- Plugin developers: instead of manually setting the parent
+  group property and adding an object to a group, use the new
+  AddEntry / AddGroup methods of PwGroup (can take ownership)
+- Plugins can now add new export file formats (in addition to
+  import formats)
+- Plugins: added static message service event
+
+- When using the installation package and Windows Vista,
+  settings are now stored in the user's profile directory
+  (instead of Virtual Store; like on Windows XP and earlier)
+- Accessibility: multi-line edit controls do not accept tabs
+  anymore (i.e. tab jumps to the next dialog control), and
+  inserting a new line doesn't require pressing Ctrl anymore
+- When moving entries, KeePass doesn't switch to the target
+  group anymore
+- When deleting entries from the search results, the entry list
+  is not cleared anymore
+- Improved entry duplication method (now also works correctly
+  in search results list and grouped list views)
+- A more useful error message is shown when checking for
+  updates fails
+- Improved formats sorting in the import dialog
+- The 'Limit to single instance' option is now turned on by
+  default (multiple databases are opened in tabs)
+- Removed 'sort up', 'sort down' and empty client icons
+- Improved program termination code (common clean-up)
+- Improved error message that is shown when reading/writing the
+  protected user key fails
+- The key file selection dialog now by default shows all files
+- Plugins: improved event handlers (now using generic delegate)
+- Implemented several workarounds for Mono (1.9.1+)
+- Added conformance level specification for XSL transformations
+  (in order to improve non-XML text exports using XSLT)
+- Improved key state toggling for auto-type on 64-bit systems
+- Removed several unnecessary .NET assembly dependencies
+- Threading safety improvements
+- Highly improved entry context menu performance when many
+  entries are selected
+- Entry selection performance improvements in main window
+- Improved entries list view performance (state caching)
+- List view group assignment improvements (to avoid splitting)
+- Removed tab stops from quality progress bars
+- After moving entries to a different group, the original group
+  is selected instead of the target group
+- Layout and text improvements in the master key creation form
+- Text in the URL field is now shown in blue (if it's black in
+  the standard theme)
+- Improved auto-type tab in entry dialog (default sequence)
+- Improved AES/Rijndael cipher engine initialization
+- Improved build scripts
+- Various code optimizations
+- Minor other improvements
+- Installer: changed AppId to allow parallel installation of
+  KeePass 1.x and 2.x
+- Minor other installer improvements
+
+- The 'View' -> 'Show Columns' -> 'Last Access Time' menu
+  command now works correctly
+- The 'Clipboard' -> 'Paste Entries' menu command now assigns
+  correct group references to pasted entries
+
+2008-04-08: 2.05 Alpha
+- Added placeholders for referencing fields of other entries
+  (dereferenced when starting URLs and performing auto-type,
+  see the auto-type placeholders documentation)
+- Added natural sorting (when sorting the entry list, KeePass
+  now performs a human-like comparison instead of a simple
+  lexicographical one; this sorts entries with numbers more
+  logically)
+- Added support for importing RoboForm passcards (HTML)
+- Added {DELAY X} auto-type command (to delay X milliseconds)
+- Added {GROUPPATH} placeholder (will be replaced by the group
+  hierarchy path to the entry; groups are separated by dots)
+- When saving databases to removable media, KeePass now tries
+  to lock and unlock the volume, which effectively flushes all
+  system caches related to this drive (this prevents data loss
+  caused by removing USB sticks without correctly unmounting in
+  Windows first; but it only works when no other program is
+  using the drive)
+- Added pattern placeholder 's' to generate special characters
+  of the printable 7-bit ASCII character set
+- A " - Copy" suffix is now appended to duplicated entries
+- After duplicating entries, the new entries are selected
+- The list view item sorter now supports dates/times, i.e.
+  sorting based on entry times is logically now, not
+  lexicographically
+- Added GUI option to focus the entry list after a successful
+  quick search (toolbar; disabled by default)
+- Several entry context menu commands are now only enabled if
+  applicable (if the user name field of an entry is empty, the
+  'Copy User Name' command is disabled, etc.)
+- Added a 'Tools' button menu in the entry editing dialog
+- Tools button menu: Added command to select an application for
+  the URL field (will be prefixed with cmd://)
+- Tools button menu: Added command to select a document for the
+  URL field (will be prefixed with cmd://)
+- Added password generator option to exclude/omit
+  user-specified characters in generated passwords
+- Added clearification paragraph in master key creation dialog
+  about using the Windows user account as source (backup, ...)
+- Added menu command to synchronize with an URL (database
+  stored on a server)
+- KeePass is now checking the network connection immediately
+  when trying to close the URL dialog
+- Added file closed event arguments (IO connection info)
+- Added "file created" event for plugins
+
+- The document manager is now accessible by plugins
+- Improved field to standard field mapping function
+- KeePass now locks when the system is suspending (if the
+  option for locking on locking Windows or switching user is
+  enabled)
+- All documents are now locked when the session is ended or the
+  user is switched (if the option for this is enabled)
+- Moving a group into one of its child groups does not make the
+  group vanish anymore
+- Auto-type validator now supports "{{}" and "{}}" sequences
+  (i.e. auto-type can send '{' and '}' characters)
+- Undo buffers of secure edit controls are now cleared
+  correctly
+- Disabling sorting does not clear search results anymore
+- Entry editing dialog: Return and Esc work correctly now
+- Column sort order indicators are now rendered using text
+  instead of images (improves Windows Vista compatibility)
+- Splitter positions are now saved correctly when exiting after
+  minimizing the main window to tray
+- Added handler code for some more unsupported image file
+  format features (when importing special ICO files)
+- Translation system is now about 75% complete
+- KeePass is now developed using Visual Studio 2008
+- Minor UI improvements
+- Minor Windows installer improvements
+
+- The CSV importer does not crash anymore when clicking Cancel
+  while trying to import entries into an empty folder
+- IO connection credentials saving works correctly now
+- Fixed duplicate accelerator keys in the entry context menu
+- Help button in master key creation dialog now works correctly
+
+2008-01-06: 2.04 Alpha
+- Added key provider API (it now is very easy to write a plugin
+  that provides additional key methods, like locking to USB
+  device ID, certificates, smart cards, ... see the developers
+  section in the online KeePass help center)
+- Added option to show entries of sub-groups in the entry list
+  of a group (see 'View' -> 'Show Entries of Sub-Groups')
+- Added XML valid characters filter (to prevent XML document
+  corruption by ASCII/DOS control characters)
+- Added context menu command to print selected entries only
+- Added option to disallow repeating characters in generated
+  passwords (both character set-based and pattern-based)
+- Moved security-reducing / dangerous password generator
+  options to a separate 'Advanced' tab page (if you enable a
+  security-reducing option, an exclamation mark (!) is
+  appended to the 'Advanced' tab text)
+- Added 'Get more languages' button to the translations dialog
+- Added textual cue for the quick-search edit control
+- The TAN wizard now shows the name of the group into which the
+  TANs will be imported
+- Improved random number generator (it now additionally
+  collects system entropy manually and hashes it with random
+  numbers provided by the system's default CSP and a counter)
+- For determining the default text in the 'Override default
+  sequence' edit box in the 'Edit Entry' window, KeePass now
+  recursively traverses up the group tree
+- Last entry list sorting mode (column, ascending / descending)
+  is now remembered and restored
+- First item in the auto-type entry selection window is now
+  focused (allowing to immediately navigate using the keyboard)
+- Text in secure edit controls is now selected when the control
+  gets the focus the first time
+- For TAN entries, only a command 'Copy TAN' is now shown in
+  the context menu, others (that don't apply) are invisible
+- Regular expressions are validated before they are matched
+- KeePass now checks the auto-type string for invalid entry
+  field references before sending it
+- The clipboard auto-clear information message is now shown in
+  the status bar instead of the tray balloon tooltip
+- Matching entries are shown only once in the search results
+  list, even when multiple fields match the search text
+- First item of search results is selected automatically, if no
+  other item is already selected (selection restoration)
+- Entries with empty titles do not match all windows any more
+- Improved high DPI support in entry window
+- When having enabled the option to automatically lock the
+  workspace after some time and saving a file fails, KeePass
+  will prompt again after the specified amount of time instead
+  of 1 second
+- KeePass now suggests the current file name as name for new
+  files (save as, save as copy)
+- The password generator profile combo box can now show more
+  profiles in the list without scrolling
+- Improved native methods exception handling (Mono)
+- Updated CHM documentation file
+- TAN wizard now assigns correct indices to TANs after new line
+  characters
+- Copying KeePass entries to the clipboard now works together
+  with the CF_CLIPBOARD_VIEWER_IGNORE clipboard format
+- KeePass now uses the correct client icons image list
+  immediately after adding a custom icon to the database
+- Fixed 'generic error in GDI+' when trying to import a 16x16
+  icon (thanks to 'stroebele' for the patch)
+- File close button in the toolbar (multiple files) works now
+- Fixed minor bug in provider registration of cipher pool
+
+2007-10-11: 2.03 Alpha
+- Added multi-document support (tabbed interface when multiple
+  files are opened)
+- KeePass 2.x now runs on Windows 98 / ME, too! (with .NET 2.0)
+- Added option to permute passwords generated using a pattern
+  (this allows generating passwords that follow complex rules)
+- Added option to start minimized and locked
+- Added support for importing Passwort.Tresor XML files
+- Added support for importing SplashID CSV files
+- Added '--exit-all' command line parameter; call KeePass.exe
+  with this parameter to close all other open KeePass instances
+  (if you do not wish to see the 'Save?' confirmation dialog,
+  enable the 'Automatically save database on exit' option)
+- Added support for CF_CLIPBOARD_VIEWER_IGNORE clipboard format
+  (clipboard viewers/extenders compliant with this format
+  ignore data copied by KeePass)
+- Added support for synchronizing with multiple other databases
+  (select multiple files in the file selection dialog)
+- Added ability to specify custom character sets in password
+  generation patterns
+- Added pattern placeholder 'S' to generate printable 7-bit
+  ASCII characters
+- Added pattern placeholder 'b' to generate brackets
+- Added support for starting very long command lines
+- Entry UUID is now shown on the 'Properties' tab page
+- Added Spanish language for installer
+- KeePass now creates a mutex in the global name space
+- Added menu command to save a copy of the current database
+- The database name is now shown in the title of the 'Enter
+  Password' window
+- Added "Exit" command to tray icon context menu
+- Pressing the 'Enter' key in the password list now opens the
+  currently selected entry for editing
+- Added '-GroupName:' parameter for 'AddEntry' command in the
+  KPScript KeePass scripting tool (see plugins web page)
+- Added URL example in 'Open URL' dialog
+- Added support for plugin namespaces with dots (nested)
+- Added ability to specify the characters a TAN can consist of
+- '-' is now treated as TAN character by default, not as
+  separator any more
+- Added ability to search using a regular expression
+- Notes in the entry list are now CR/LF-filtered
+- Added {PICKPASSWORDCHARS} placeholder, KeePass will show a
+  dialog which allows you to pick certain characters
+- The password generator dialog is now shown in the Windows
+  taskbar if the main window is minimized to tray
+- Caps lock is now disabled before auto-typing
+- Improved installer (added start menu link to the CHM help
+  file, mutex checking at uninstallation, version information
+  block, ...)
+- Plugin architecture: added cancellable default entry action
+  event handler
+- Added support for subitem infotips in various list controls
+- Group name is now shown in the 'Find' dialog (if not root)
+- Pressing the 'Insert' key in the password list now opens the
+  'Add Entry' dialog
+- Last search settings are now remembered (except search text)
+- The column order in the main window is now remembered
+- Pressing F2 in the groups tree now initiates editing the name
+  of the currently selected group
+- Pressing F2 in the password list now opens the editing dialog
+- The 'About' dialog is now automatically closed when clicking
+  an hyperlink
+- Entries generated by 'Tools' - 'Password Generator' are now
+  highlighted in the main window (visible and selected)
+- Extended auto-close functionality to some more dialogs
+- Protected user key is now stored in the application data
+  directory instead of the registry (when upgrading from 2.02,
+  first change the master key so it doesn't use the user
+  account credentials option!)
+- Improved configuration file format (now using XML
+  serialization, allowing serialization of complex structures)
+- Improved configuration saving/loading (avoid file system
+  virtualization on Windows Vista when using the installer,
+  improved out of the box support for installation by admin /
+  usage by user, better limited user account handling, ...)
+- Improved password generator profile management (UI)
+- Improved password generator character set definition
+- Custom icons can be deleted from the database now
+- Changed password pattern placeholders to support ANSI
+- Removed plugin projects from core distribution (plugin source
+  codes will be available separately, like in 1.x)
+- Window position and size is saved now when exiting KeePass
+  while minimized
+- Splitter positions are restored correctly now when the main
+  window is maximized
+- Password list refreshes now restore the previous view
+  (including selected and focused items, ...)
+- Improved session ending handler
+- Improved help menu
+- Added more JPEG extensions in the icon dialog (JFIF/JFI/JIF)
+- Navigation through the group tree using the keyboard is now
+  possible (entries list is updated)
+- Options dialog now remembers the last opened tab page
+- Synchronization: deletion information is merged correctly now
+- Improved importing status dialog
+- Improved search results presentation
+- Title field is now the first control in the focus cycle of
+  the entry dialog
+- The auto-type entry selection dialog now also shows custom /
+  imported icons
+- The quick-find box now has the focus after opening a database
+- The main window title now shows 'File - KeePass Password
+  Safe' instead of 'KeePass Password Safe [File]'; improved
+  tooltip text for tray icon
+- The 'Save Attachments' context menu command is disabled now
+  if the currently selected entry doesn't have any attachments
+- A more useful error message is shown when trying to import an
+  unsupported image format
+- Replaced 'Search All Fields' by an additional 'Other' option
+- Expired/used TAN entries are not shown in the expired entries
+  dialog any more
+- UI now mostly follows the Windows Vista UI text guidelines
+- Improved UI behavior in options dialog
+- Improved text in password generator preview window
+- After activating a language, the restart dialog is only shown
+  if the selected language is different from the current one
+- Online help browser is now started in a separate thread
+- Value field in 'Edit String' window now accepts 'Return' key
+- The name prompt in the 'Edit String' window now initially
+  shows a prompt instead of an invalid field name warning
+- Expired entries are now also shown when unlocking the
+  database
+- Expired entries are not shown any more in the auto-type entry
+  selection dialog
+- Various dialogs: Return and Esc work correctly now
+- Improved key handling in password list
+- Updated SharpZipLib component in KeePassLibSD
+- Updated CHM documentation file
+- Deleting custom string fields of entries works correctly now
+- Fixed a small bug in the password list view restoration
+  routines (the item above the previous top one was visible)
+- KeePass doesn't prevent Windows from shutting down any more
+  when the 'Close button minimizes window' option is enabled
+- The "Application Policy Help" link in the options dialog
+  works now
+- KeePass doesn't crash any more when viewing an history entry
+  that has a custom/imported icon
+- Icon in group editing dialog is now initialized correctly
+- Last TAN is not ignored any more by the TAN wizard
+- Other minor features and bugfixes
+
+2007-04-11: 2.02 Alpha
+- Added "Two-Channel Auto-Type Obfuscation" feature, which
+  makes auto-type resistant against keyloggers; this is an opt-
+  in feature, see the documentation
+- Added KDBX data integrity verification (partial content
+  hashes); note: this is a breaking change to the KDBX format
+- Added internal data viewer to display attachments (text
+  files, images, and web documents); see the new 'View' button
+  in the 'Edit Entry' window and the new dynamic entry context
+  menu popup 'Show In Internal Viewer'
+- External images can now be imported and used as entry icons
+- Added KeePassLibC and KeePassNtv 64-bit compatibility
+- Added Spamex.com import support
+- Added KeePass CSV 1.x import support
+- When adding a group, users are immediately prompted for a
+  name (like Windows Explorer does when creating new folders)
+- Added prompts for various text boxes
+- The installer's version is now set to the KeePass version
+- The key prompt dialog now shows an 'Exit' button when
+  unlocking a database
+- Added F1 menu shortcut for opening the help file/page
+- URL override is now displayed in the entry view
+- Added ability to check if the composite key is valid
+  immdiately after starting to decrypt the file
+- Added ability to move groups on the same level (up / down),
+  use either the context menu or the Alt+... shortcuts
+- The database isn't marked as modified any more when closing
+  the 'Edit Entry' dialog with OK but without modifying
+  anything
+- Added version information for native transformations library
+- Local file name isn't displayed any more in URL dialog
+- Improved path clipping (tray text, ...)
+- Improved data field retrieval in SPM 2007 import module
+- Improved attachments display/handling in 'Edit Entry' dialog
+- Improved entry context menu (added some keyboard shortcut
+  indicators, updated icons, ...)
+- Improved performance of secure password edit controls
+- Clearified auto-type documentation
+- Installer uses best compression now
+- Improved auto-type state handling
+- In-memory protected custom strings are hidden by asterisks
+  in the entry details window now
+- Improved entropy collection dialog
+- Updated import/export documentation
+- Added delete shortcut key for deleting groups
+- Instead of showing the number of attachments in the entry
+  view, the actual attachment names are shown now
+- Improved asterisks hiding behavior in entry view
+- New entries now by default inherit the icon of their parent
+  groups, except if it's a folder-like icon
+- Updated AES code in native library
+- Improved native library detection and configuration
+- Improved entry/group dragging behavior (window updates, ...)
+- A more useful error message is shown when you try to export
+  to a KDB3 file without having KeePassLibC installed
+- Configuration class supports DLL assemblies
+- KeePass doesn't create an empty directory in the application
+  data path any more, if the global config file is writable
+- Clipboard isn't cleared any more at exit if it doesn't
+  contain data copied by KeePass
+- Empty auto-type sequences in custom window-sequence pairs now
+  map to the inherited ones or default overrides, if specified
+- Cleaned up notify tray resources
+- Improved help menu
+- A *lot* code quality improvements
+- ShInstUtil doesn't crash any more when called without any
+  parameter
+- Auto-type now sends modifier keys (+ for Shift, % for Alt,
+  ...) and character groups correctly
+- Fixed alpha transparency multi-shadow bug in groups list
+- Overwrite confirmation now isn't displayed twice any more
+  when saving an attachment from the 'Edit Entry' window
+- User interface state is updated after 'Select All' command
+- Auto-Type warnings are now shown correctly
+- Fixed auto-type definition in sample entry (when creating a
+  new database)
+- The global auto-type hot key now also works when KeePass is
+  locked and minimized to tray
+- Fixed bug in initialization of Random class (KeePass could
+  have crashed 1 time in 2^32 starts)
+
+2007-03-23: 2.01 Alpha
+- Improved auto-type engine (releases and restores modifier
+  keys, improved focusing, etc.)
+- Implemented update-checking functionality
+- Added KPScript plugin (see source code package) for scripting
+  (details about it can be found in the online help center)
+- Added Whisper 32 1.16 import support
+- Added Steganos Password Manager 2007 import support
+- Search results now show the full path of the container group
+- Entry windows (main password list, auto-type entry selection
+  dialog, etc.) now show item tooltips when hovering over them
+- Added window box drop-down hint in the auto-type item dialog
+- Database maintenance history days setting is now remembered
+- Improved main window update after importing a file
+- Improved command line handling
+- If opening/starting external files fails, helpful messages
+  are displayed now
+- Completely new exception handling mechanism in the Kdb4File
+  class (allows to show more detailed messages)
+- New message service class (KeePassLib.Utility.MessageService)
+- Added option to disable remembering the password hiding
+  setting in the 'Edit Entry' window
+- Added menu shortcuts for opening the current entry URL
+  (Ctrl+U) and performing current entry auto-type (Ctrl+V)
+- Changed file extension to KDBX
+- Password generation profiles are now saved when the dialog is
+  closed with 'Close'/'Cancel'
+- Entry URL overrides now precede the global URL override
+- Standard password generation profiles are now included in the
+  executable file
+- Restructured plugin architecture, it's much clearer now
+  (abstract base class, assembly-internal manager class, ...)
+- Only non-empty strings are now displayed in the entry view
+- Current working directory is set to the KeePass application
+  directory before executing external files/URLs
+- Changed fields shown in the auto-type entry selection dialog:
+  title, user name and URL are displayed instead of title, user
+  name and password
+- Clearified clipboard commands in context menus
+- Help buttons now open the correct topics in the CHM
+- Fixed name in the installer script
+- Workspace is not locked any more if a window is open (this
+  prevents data loss)
+- The 'Find' toolbar button works now
+- The OK button in the Import dialog is now enabled when you
+  manually enter a path into the file text box
+- Fixed entry list focus bug
+- Fixed menu focus bug
+- The 'Copy Custom String' menu item doesn't disappear any more
+- Fixed enabled/disabled state of auto-type menu command
+
+2007-03-17: 2.00 Alpha
+- Strings containing quotes are now passed correctly over the
+  command-line
+- Created small help file with links to online resources
+- Rewrote cipher engines pool
+- Restructured KeePassLib
+- Added dialog for browser selection
+- Added option to disable searching for key files on removable
+  media
+- Improved KDB3 support (especially added support for empty
+  times as created by the KeePass Toolbar for example)
+- Added confirmations for deleting entries and groups
+- Fixed a lot of bugs and inconsistencies; added features
+- Fixed a bug in the 'Start KeePass at Windows startup'
+  registration method
+- Added custom split container control to avoid focus problems
+- Clipboard is only cleared if it contains KeePass data
+- New system for configuration defaults
+- A LOT of other features, bugfixes, ...
+
+... (a lot of versions here) ...
+
+2006-10-07: 2.00 Pre-Alpha 29
+- Various small additions and bugfixes
+
+2006-10-06: 2.00 Pre-Alpha 28
+- Implemented entry data drag-n-drop for main entry list
+- Implemented URL overriding
+- Added {} repeat operator in password generator
+- Added database maintenance dialog (deleting history entries)
+- Custom entry strings are now shown in the entry preview
+- Added alternative window layout: side by side
+- A lot of other features and bugfixes
+
+... (some versions here) ...
+
+2006-09-17: 2.00 Pre-Alpha 25
+- Fixed exception that occured when WTS notifications are
+  unavailable
+
+2006-09-16: 2.00 Pre-Alpha 24
+- Implemented quality progress bars (gradient bars)
+- Added special key codes into placeholder insertion field in
+  the 'Edit AutoType' dialog
+- Currently opened windows are listed in the 'Edit AutoType'
+  dialog
+- Entries can be copied/pasted to/from Windows clipboard
+- Added {APPDIR}, {DOCDIR} and {GROUP} codes
+- Foreground and background colors can be assigned to entries
+- Expired entries are displayed using a striked-out font
+- Password generator supports profiles now
+- Password generator supports patterns now
+- VariousImport: Added support for Password Exporter XML files
+- A _lot_ of other features and bugfixes
+
+2006-09-07: 2.00 Pre-Alpha 23
+- Internal release
+
+2006-09-07: 2.00 Pre-Alpha 22
+- Improved password quality estimation
+- Implemented secure edit controls (in key creation dialog, key
+  prompt dialog and entry editing dialog)
+
+2006-09-05: 2.00 Pre-Alpha 21
+- Removed BZip2 compression
+- Added font selection for main window lists
+- Added file association creation/removal buttons in the
+  options dialog
+- Installer supports associating KDB files with KeePass
+- Added option to run KeePass at Windows startup (for current
+  user; see Options dialog, Integration page)
+- Added default tray action (sending/restoring to/from tray)
+- Added single-click option for default tray action
+- Added option to automatically open last used database on
+  KeePass startup (see Options dialog, Advanced page)
+- Added option to automatically save the current database on
+  exit and workspace locking (Options dialog, Advanced page)
+- Implemented system-wide KeePass application messages
+- Added 'Limit to single instance' option
+- Added option to check for update at KeePass startup
+- Added options to show expired entries and entries that will
+  expire soon after opening a database
+- Added option to generate random passwords for new entries
+- Links in the entry view are clickable now
+- Links in the notes field of the entry dialog are clickable
+  now
+- Fixed context menu auto-type command (inheriting defaults)
+- Improved entry list state updating performance
+- Classic databases are listed in the main MRU list, prefixed
+  with '[Classic]'
+- Other features and bugfixes
+
+2006-09-03: 2.00 Pre-Alpha 20
+- First testing release
+
+... (a lot of versions here) ...
+
+2006-03-21: 2.00 Pre-Alpha 0
+- Project started

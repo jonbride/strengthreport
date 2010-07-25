@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LayoutBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Layout Name="Corporate" Title="Corporate">
+    <ArrayOfLayoutElement>
+      <LayoutElement>
+        <Width>25</Width>
+        <Data>
+          <StaticData>Title</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Comparator>&lt;=</Comparator>
+          <CompareWith>Medium</CompareWith>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Fullname</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>25</Width>
+        <Data>
+          <StaticData>UserName</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Username</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>25</Width>
+        <Data>
+          <StaticData>Password</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Comparator>length is</Comparator>
+          <CompareWith>5</CompareWith>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Password</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>25</Width>
+        <Data>
+          <StaticData>Empty</StaticData>
+          <FunctionType>StrengthReport.Measuring.AdvancedStrengthMeasure</FunctionType>
+        </Data>
+        <Filter>
+          <Comparator>longer than</Comparator>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Basic strength</Title>
+      </LayoutElement>
+    </ArrayOfLayoutElement>
+  </Layout>
+  <Layout Name="Short passwords" Title="Short passwords">
+    <ArrayOfLayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Title</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Title</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>UserName</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Username</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Password</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Comparator>shorter than</Comparator>
+          <CompareWith>6</CompareWith>
+          <Enabled>true</Enabled>
+        </Filter>
+        <Title>Password</Title>
+      </LayoutElement>
+    </ArrayOfLayoutElement>
+  </Layout>
+  <Layout Name="Everything" Title="Everything">
+    <ArrayOfLayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Title</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Title</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>UserName</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Username</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Password</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Password</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Notes</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Notes</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>URL</StaticData>
+          <FunctionType />
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>URL</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Empty</StaticData>
+          <FunctionType>StrengthReport.Measuring.BasicStrengthMeasure</FunctionType>
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Basic</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Empty</StaticData>
+          <FunctionType>StrengthReport.Measuring.AdvancedStrengthMeasure</FunctionType>
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Advanced</Title>
+      </LayoutElement>
+      <LayoutElement>
+        <Width>0</Width>
+        <Data>
+          <StaticData>Empty</StaticData>
+          <FunctionType>StrengthReport.Measuring.BuiltInStrengthMeasure</FunctionType>
+        </Data>
+        <Filter>
+          <Enabled>false</Enabled>
+        </Filter>
+        <Title>Built-in</Title>
+      </LayoutElement>
+    </ArrayOfLayoutElement>
+  </Layout>
+</LayoutBox>

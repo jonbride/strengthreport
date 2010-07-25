@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StrengthReport.Measuring.AdvancedStrengthMeasure">
+    <Position X="0.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Measuring\AdvancedStrengthMeasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Measuring.FunctionBox">
+    <Position X="0.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Measuring\FunctionBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Measuring.BasicStrengthMeasure">
+    <Position X="5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Measuring\BasicStrengthMeasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Measuring.BuiltInStrengthMeasure">
+    <Position X="2.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Measuring\BuiltInStrengthMeasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Measuring.FunctionAbstract" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAEAEgAQAAkAAAAAAAIAAAAAAQAAAAAA=</HashCode>
+      <FileName>Measuring\FunctionAbstract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Measuring.PasswordQualityFormat">
+    <Position X="2.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Measuring\PasswordQuality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="StrengthReport.Measuring.PasswordQuality" Collapsed="true">
+    <Position X="5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAQAAABAAAAAAAAAAAQAAABAAAIAEAAA=</HashCode>
+      <FileName>Measuring\PasswordQuality.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="8.83" />
+</ClassDiagram>

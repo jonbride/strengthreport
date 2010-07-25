@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.4.795 (http://www.liquid-technologies.com)-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+    XML Representation of Template class, defines a design for reporting, such as margins, colors, fonts and sizes.
+  </xs:documentation>
+  </xs:annotation>
+  <xs:element name="Template">
+    <xs:complexType>
+      <xs:all>
+        <xs:annotation>
+          <xs:documentation>The root of Template</xs:documentation>
+        </xs:annotation>
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="PageSize" type="Size">
+          <xs:annotation>
+            <xs:documentation>Represent the page physical dimensions in milimetre (mm, SI unit), example A4 portrait: Width: 210mm; Height: 297mm.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Margin" type="Margin" />
+        <xs:element minOccurs="1" name="ReportHeader" type="Style" />
+        <xs:element minOccurs="1" name="ReportFooter" type="Style" />
+        <xs:element name="Header" type="Style" />
+        <xs:element minOccurs="0" name="GroupHeading" type="Style" />
+        <xs:element minOccurs="0" name="Row" type="Style" />
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Style">
+    <xs:all>
+      <xs:annotation>
+        <xs:documentation>Style class represents a visual mapping for a certain object on the page, contains Font, Alignment, Background color(s), and Height.</xs:documentation>
+      </xs:annotation>
+      <xs:element name="Font" type="Font" />
+      <xs:element name="Alignment">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Left" />
+            <xs:enumeration value="Right" />
+            <xs:enumeration value="Center" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Backgrounds">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element minOccurs="1" maxOccurs="2" name="Background" type="Color" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Height" type="xs:float" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="Font">
+    <xs:all>
+      <xs:element name="Source">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="SYSTEM" />
+            <xs:enumeration value="FILE" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FontName" type="xs:string" />
+      <xs:element name="FontStyle">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Normal" />
+            <xs:enumeration value="Bold" />
+            <xs:enumeration value="Italic" />
+            <xs:enumeration value="BoldItalic" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Color" type="Color" />
+      <xs:element name="Size" type="xs:float" />
+      <xs:element name="Embed" type="xs:boolean" />
+      <xs:element default="default" name="Encoding" type="xs:string" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="Color">
+    <xs:attribute name="C" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="M" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="Y" type="xs:unsignedByte" use="required" />
+    <xs:attribute name="K" type="xs:unsignedByte" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Size">
+    <xs:all>
+      <xs:element name="Width" type="xs:float" />
+      <xs:element name="Height" type="xs:float" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="Margin">
+    <xs:all>
+      <xs:element name="Top" type="xs:float" />
+      <xs:element name="Bottom" type="xs:float" />
+      <xs:element name="Left" type="xs:float" />
+      <xs:element name="Right" type="xs:float" />
+    </xs:all>
+  </xs:complexType>
+</xs:schema>

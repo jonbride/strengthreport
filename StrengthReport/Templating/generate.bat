@@ -1,0 +1,1 @@
+xsd.exe /c /n:StrengthReport.Templating Template.xsd

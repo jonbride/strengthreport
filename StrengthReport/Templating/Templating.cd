@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StrengthReport.Templating.Template">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAAAAAAACAAIAAAYQAQEwAAAAAQgEAIAAAEAAAAAA=</HashCode>
+      <FileName>Templating\Template.user.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Templating.Style">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAABAAAAAACACAAAAFAAAAAAAAISQAgAAACIAA=</HashCode>
+      <FileName>Templating\Template.user.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Templating.Font">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAgQAEgAAggAAAgAgAAAAoAAAAAAAECAAgAAAAAA=</HashCode>
+      <FileName>Templating\Template.user.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Templating.Color">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAEBAAAgEAAAAAAAAEAAAgIIAIAA=</HashCode>
+      <FileName>Templating\Template.user.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StrengthReport.Templating.TemplateBox">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Templating\TemplateBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="8.83" />
+</ClassDiagram>
